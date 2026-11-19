@@ -1,0 +1,242 @@
+{
+ "keeper/home": [
+  719,
+  1600
+ ],
+ "keeper/journey": [
+  721,
+  1600
+ ],
+ "keeper/vow": [
+  720,
+  1600
+ ],
+ "keeper/cover-1": [
+  1266,
+  752
+ ],
+ "keeper/cover-2": [
+  1091,
+  599
+ ],
+ "keeper/cover-3": [
+  1280,
+  720
+ ],
+ "keeper/seal": [
+  1280,
+  720
+ ],
+ "babysteps/store-1": [
+  740,
+  1600
+ ],
+ "babysteps/store-2": [
+  740,
+  1600
+ ],
+ "babysteps/store-3": [
+  740,
+  1600
+ ],
+ "play-well/cover": [
+  1600,
+  1066
+ ],
+ "play-well/1": [
+  1600,
+  1067
+ ],
+ "play-well/2": [
+  1067,
+  1600
+ ],
+ "play-well/3": [
+  1067,
+  1600
+ ],
+ "one-minute-stories/cover": [
+  1200,
+  1600
+ ],
+ "one-minute-stories/1": [
+  1587,
+  1600
+ ],
+ "one-minute-stories/2": [
+  1600,
+  1131
+ ],
+ "one-minute-stories/3": [
+  487,
+  650
+ ],
+ "de-pl/cover": [
+  1600,
+  900
+ ],
+ "de-pl/1": [
+  1224,
+  865
+ ],
+ "de-pl/2": [
+  1217,
+  860
+ ],
+ "de-pl/3": [
+  917,
+  891
+ ],
+ "stackoverflow-for-artists/cover": [
+  1091,
+  1078
+ ],
+ "stackoverflow-for-artists/2": [
+  550,
+  414
+ ],
+ "stackoverflow-for-artists/3": [
+  729,
+  546
+ ],
+ "stackoverflow-for-artists/4": [
+  408,
+  546
+ ],
+ "stackoverflow-for-artists/5": [
+  610,
+  599
+ ],
+ "stackoverflow-for-artists/1": [
+  552,
+  415
+ ],
+ "marys-way/cover": [
+  1470,
+  1157
+ ],
+ "marys-way/1": [
+  1000,
+  667
+ ],
+ "marys-way/2": [
+  667,
+  1000
+ ],
+ "marys-way/3": [
+  667,
+  1000
+ ],
+ "feeding-instantly/cover": [
+  940,
+  1600
+ ],
+ "feeding-instantly/1": [
+  1170,
+  1161
+ ],
+ "feeding-instantly/2": [
+  1170,
+  1171
+ ],
+ "feeding-instantly/3": [
+  1170,
+  1166
+ ],
+ "feeding-instantly/4": [
+  1170,
+  1166
+ ],
+ "feeding-instantly/5": [
+  1170,
+  1160
+ ],
+ "feeding-instantly/6": [
+  1170,
+  1171
+ ],
+ "feeding-instantly/7": [
+  1170,
+  1172
+ ],
+ "feeding-instantly/8": [
+  1170,
+  1159
+ ],
+ "feeding-instantly/9": [
+  1170,
+  1161
+ ],
+ "bohemian-jewellery/cover": [
+  1170,
+  1458
+ ],
+ "bohemian-jewellery/1": [
+  1148,
+  679
+ ],
+ "bohemian-jewellery/2": [
+  1170,
+  1159
+ ],
+ "bohemian-jewellery/3": [
+  1170,
+  653
+ ],
+ "intimacy-of-materiality/cover": [
+  1600,
+  1067
+ ],
+ "intimacy-of-materiality/1": [
+  1066,
+  1600
+ ],
+ "intimacy-of-materiality/2": [
+  1066,
+  1600
+ ],
+ "code-for-unexpected-events/cover": [
+  1600,
+  900
+ ],
+ "code-for-unexpected-events/1": [
+  876,
+  586
+ ],
+ "dosyp/sketch": [
+  1600,
+  1131
+ ],
+ "dosyp/dispensers": [
+  1600,
+  1066
+ ],
+ "dosyp/pouring": [
+  1600,
+  1066
+ ],
+ "dosyp/bowl": [
+  1080,
+  720
+ ],
+ "dosyp/office": [
+  1600,
+  1067
+ ],
+ "dosyp/flyer": [
+  1600,
+  933
+ ],
+ "spatial-web-lab/table": [
+  1440,
+  1080
+ ],
+ "spatial-web-lab/post": [
+  1440,
+  1080
+ ],
+ "spatial-web-lab/review": [
+  1440,
+  1080
+ ]
+}

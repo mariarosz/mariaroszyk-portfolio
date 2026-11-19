@@ -1,26 +1,103 @@
 @import "tailwindcss";
 
+/* Paper and ink. One quiet column; projects as an index, not cards. */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --paper: #f7f3ec;
+  --ink: #1f1b16;
+  --ink-2: #5c554b;
+  --rule: #d9d0c2;
+  --accent: #b8542f;
+  --tint: #efe7da;
+  color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --paper: #17140f;
+    --ink: #ebe4d8;
+    --ink-2: #a69c8c;
+    --rule: #352f27;
+    --accent: #e0825d;
+    --tint: #211c15;
+    color-scheme: dark;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@theme inline {
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-rule: var(--rule);
+  --color-accent: var(--accent);
+  --color-tint: var(--tint);
+  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --font-body: var(--font-instrument), "Helvetica Neue", Arial, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  a {
+    text-decoration-color: var(--rule);
+    text-underline-offset: 3px;
+  }
+  a:hover {
+    text-decoration-color: var(--accent);
+  }
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+  ::selection {
+    background: var(--accent);
+    color: var(--paper);
+  }
+}
+
+@layer components {
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 18px;
+  }
+  .display {
+    font-family: var(--font-display);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+  .display em {
+    font-style: italic;
+    font-weight: 300;
+  }
+  .prose-2 {
+    columns: 2;
+    column-gap: 48px;
+  }
+  .prose-2 p {
+    break-inside: avoid;
+  }
+  @media (max-width: 760px) {
+    .prose-2 {
+      columns: 1;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
