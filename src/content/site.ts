@@ -3,8 +3,8 @@ import type { Site, Writing } from "./types";
 export const site: Site = {
   name: "Maria Roszyk",
   role: "Front-end engineer and art historian",
-  location: "Half Moon Bay, California",
-  email: "roszykmaria@gmail.com", // switch to hello@mariaroszyk.com once the domain and Email Routing are live
+  location: "San Francisco Bay Area",
+  email: "roszykmaria@gmail.com", // switch to hello@mariaroszyk.dev once the domain and Email Routing are live
   github: "https://github.com/mariarosz",
   linkedin: "https://www.linkedin.com/in/maria-roszyk/",
   headline:

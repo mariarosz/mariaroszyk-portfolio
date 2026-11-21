@@ -1,4 +1,4 @@
-# mariaroszyk.com
+# mariaroszyk.dev
 
 Portfolio of Maria Roszyk: front-end engineer and art historian. Next.js 16 (App Router, Cache Components), Tailwind CSS 4, Sanity as headless CMS, self-hosted variable fonts, no client-side JavaScript beyond the woven hero canvas and the copy-email button.
 
@@ -24,7 +24,7 @@ npm run lint
 
 1. Create a free Sanity project: `npx sanity@latest init --bare` in this folder, or at sanity.io/manage. Note the project id and keep the dataset name `production`.
 2. Copy `.env.example` to `.env.local` and fill in `NEXT_PUBLIC_SANITY_PROJECT_ID`.
-3. In sanity.io/manage → API → CORS origins, add `http://localhost:3000` and `https://mariaroszyk.com` (with credentials).
+3. In sanity.io/manage → API → CORS origins, add `http://localhost:3000` and `https://mariaroszyk.dev` (with credentials).
 4. Create an **Editor** token (API → Tokens) and run the seed once:
    ```bash
    SANITY_WRITE_TOKEN=... npm run seed
@@ -40,7 +40,7 @@ Schemas are in `src/sanity/schemaTypes`. Project pages render Portable Text as p
 1. Push this folder to a GitHub repo (`mariaroszyk-portfolio`).
 2. In Vercel: **Add New → Project → Import** the repo. Framework is detected as Next.js; no settings needed. Hobby plan is enough.
 3. In Vercel → Settings → Environment Variables add `NEXT_PUBLIC_SITE_URL` = the `https://….vercel.app` address Vercel gave you, and redeploy. The site is live on that address.
-4. **Domain (when mariaroszyk.com is free again)**: Settings → Domains → add `mariaroszyk.com` and `www.mariaroszyk.com`; change `NEXT_PUBLIC_SITE_URL` to `https://mariaroszyk.com`; set the email back to `hello@mariaroszyk.com` in `src/content/site.ts`. Vercel shows the DNS records to create.
+4. **Domain (when mariaroszyk.dev is free again)**: Settings → Domains → add `mariaroszyk.dev` and `www.mariaroszyk.dev`; change `NEXT_PUBLIC_SITE_URL` to `https://mariaroszyk.dev`; set the email back to `hello@mariaroszyk.dev` in `src/content/site.ts`. Vercel shows the DNS records to create.
 5. In **Cloudflare** (DNS for the domain), add exactly what Vercel shows, with the proxy **off** (grey cloud, “DNS only”):
    - `A` record, name `@`, value `76.76.21.21`
    - `CNAME` record, name `www`, value `cname.vercel-dns.com`
