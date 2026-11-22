@@ -12,13 +12,13 @@ export const projects: Project[] = [
     slug: "keeper",
     title: "Keeper",
     kind: "product",
-    year: "2024–2026",
+    year: "2025–2026",
     sortYear: 2026,
     featured: true,
     tagline: "A 90-day programme for couples in crisis, as an iOS app. Shipped to the App Store.",
     role: "Product & front-end engineer",
     outcome:
-      "Built and shipped an iOS app for couples in crisis: a 90-day programme in 3 phases and 12 modules, 3-minute daily audio and an LLM-powered dialog. Two people, React Native, from the first illustration to the App Store.",
+      "Designed, built and shipped an iOS app for couples: a 90-day guided programme with daily audio and an LLM-powered dialog.",
     lead: "Ninety days, one vow signed with a finger, and a three-minute spark every morning.",
     stack: ["React Native", "Expo", "TypeScript", "LLM dialog", "Audio"],
     facts: [
@@ -87,7 +87,7 @@ export const projects: Project[] = [
     tagline: "A memory journal for families: one timeline per child. Web app in 2022, rebuilt as a React Native app and published on the App Store in 2026.",
     role: "Designer & front-end engineer",
     outcome:
-      "A memory journal for families, built twice: in 2022 as a web app with a team of three (React, Firebase, 135 commits), and in 2026 alone as a React Native app for iOS and Android, published on the App Store.",
+      "A memory journal for families, built twice: a web app with a team of three in 2022, then a solo React Native rebuild published on the App Store in 2026.",
     lead: "Hold on to the little moments: milestones, letters and photographs, one child at a time.",
     stack: ["React Native", "Expo", "Next.js", "TypeScript", "Firebase"],
     facts: [
@@ -111,12 +111,12 @@ export const projects: Project[] = [
     slug: "inhabit",
     title: "Inhabit (Bluetent)",
     kind: "product",
-    year: "2022–2023",
-    sortYear: 2023,
+    year: "2023–2024",
+    sortYear: 2024,
     tagline: "Migrated Bluetent’s internal site-building dashboard from Vue.js to React, TypeScript and Tailwind.",
     role: "Frontend developer",
     outcome:
-      "Migrated the internal dashboard Bluetent’s team uses to publish direct-booking websites from Vue.js to React, TypeScript and Tailwind, in a six-person team. Onboarded two engineers mid-migration; both shipped independently within two weeks.",
+      "Migrated Bluetent’s site-building dashboard from Vue.js to React, TypeScript and Tailwind: about 35 typed components, in a six-person team.",
     lead: "An internal tool that non-technical people use to assemble websites. Rebuilt in a new stack without stopping the people who use it.",
     stack: ["React", "TypeScript", "Tailwind CSS", "Vue.js"],
     facts: [
@@ -174,7 +174,7 @@ export const projects: Project[] = [
     tagline: "Co-founded an office-snack subscription for tech companies; designed its brand, packaging, website and ordering flow.",
     role: "Co-founder & designer",
     outcome:
-      "Co-founded a subscription delivering several tons of snack mixes a month to dozens of tech companies in Poland. Designed 100% of what customers saw: brand, packaging and labels, website and the B2B ordering flow.",
+      "Co-founded a B2B snack subscription for tech companies in Poland and designed everything customers saw: brand, packaging, website and ordering flow.",
     lead: "Several tons of nut mixes a month, delivered to dozens of offices. Everything you could see was mine to design.",
     stack: ["Brand identity", "Packaging", "Web design", "B2B ordering flow"],
     facts: [
@@ -228,7 +228,7 @@ export const projects: Project[] = [
     tagline: "Phone-to-VR photogrammetry pipeline and a Vive experience. Creating Reality Hackathon, USC Los Angeles: category winner.",
     role: "Category winner, Creating Reality Hackathon 2018",
     outcome:
-      "In 48 hours, a team of five built a phone-to-VR photogrammetry pipeline and a Vive experience you enter by leaning in. Category winner (Content Production) and HTC Vive prize at USC Los Angeles. I captured the scenes and cleaned the meshes for rigging.",
+      "A phone-to-VR photogrammetry pipeline built by five people in 48 hours. Category winner at the Creating Reality Hackathon, USC Los Angeles.",
     lead: "Film a person on your phone, get a 3D model back, step into the scene.",
     stack: ["Photogrammetry (Agisoft, Colmap, OpenMVS)", "Blender", "Unity + SteamVR", "Python, C#"],
     facts: [

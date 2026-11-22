@@ -6,7 +6,7 @@ export function Footer() {
       <span>
         {site.name}, {site.location}
       </span>
-      <span>Set in Fraunces and Instrument Sans. Built with Next.js and Sanity.</span>
+      <span>Set in Fraunces and Instrument Sans. Built with Next.js and Tailwind CSS.</span>
     </footer>
   );
 }

@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: { default: "Maria Roszyk — front-end engineer and art historian", template: "%s — Maria Roszyk" },
   description:
-    "Maria Roszyk is a front-end engineer and art historian in San Francisco Bay Area. She builds production interfaces and AI-native tools for families, and makes art from fabric scraps, wildflowers and code.",
+    "Maria Roszyk is a front-end engineer and art historian in the San Francisco Bay Area. She builds interfaces in React, Next.js and React Native, and makes art from fabric scraps, wildflowers and code.",
   openGraph: { type: "website", siteName: site.name, locale: "en_US" },
 };
 
