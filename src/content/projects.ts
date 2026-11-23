@@ -105,7 +105,7 @@ export const projects: Project[] = [
       "In 2026 I rebuilt it from scratch as a mobile app in React Native and Expo for iOS and Android, with a Next.js landing page, and published it on the App Store. The second version is quieter: a warm palette, serif headings, a single large photograph per entry, and the child’s age computed from the birth date so that every moment is placed on a line that keeps growing.",
       "It is the project that made me want to build tools for families. The question it asks is simple and I still do not think it is solved: how do you keep a record of a childhood without turning the childhood into content?",
     ],
-    links: [{ label: "Code (2022)", href: "https://github.com/mariarosz" }],
+    links: [{ label: "Code (2022)", href: "https://github.com/mariarosz/BabySteps" }],
   },
   {
     slug: "inhabit",
@@ -120,11 +120,11 @@ export const projects: Project[] = [
     lead: "An internal tool that non-technical people use to assemble websites. Rebuilt in a new stack without stopping the people who use it.",
     stack: ["React", "TypeScript", "Tailwind CSS", "Vue.js"],
     facts: [
-      { label: "Role", value: "Frontend Developer, remote, six-person team" },
+      { label: "Role", value: "Frontend Developer, six-person team" },
       { label: "Product", value: "Bluetent by Inhabit: direct-booking websites for vacation-rental companies" },
       { label: "Scope", value: "Component migration Vue → React + TypeScript + Tailwind; onboarding of two engineers" },
     ],
-    cover: { src: "/images/inhabit/wireframe.svg", alt: "Ink-line wireframe of a site-building dashboard, Vue to React; the real tool is not public", w: 1200, h: 900 },
+    cover: { src: "/images/inhabit/wireframe.svg", alt: "Ink-line wireframe of a site-building dashboard, Vue to React, with a blue tent and a holiday cabin in the page cards; the real tool is not public", w: 1200, h: 900 },
     gallery: [],
     sections: [
       {
@@ -171,15 +171,16 @@ export const projects: Project[] = [
     kind: "product",
     year: "2019–2020",
     sortYear: 2020,
-    tagline: "Co-founded an office-snack subscription for tech companies; designed its brand, packaging, website and ordering flow.",
+    tagline: "Co-founded an office-snack subscription for tech companies: our own nut mixes, 40 subscribing offices. Brand, packaging, website and client communication.",
     role: "Co-founder & designer",
     outcome:
-      "Co-founded a B2B snack subscription for tech companies in Poland and designed everything customers saw: brand, packaging, website and ordering flow.",
-    lead: "Several tons of nut mixes a month, delivered to dozens of offices. Everything you could see was mine to design.",
-    stack: ["Brand identity", "Packaging", "Web design", "B2B ordering flow"],
+      "Co-founded a snack subscription for tech offices in Poland: our own nut mixes, delivered to 40 companies. I designed the brand, packaging and website, and ran communication with clients.",
+    lead: "Several tons of nut mixes a month, delivered to forty offices. Everything you could see or read was mine to make.",
+    stack: ["Brand identity", "Packaging", "Web design", "B2B ordering flow", "Client communication"],
     facts: [
-      { label: "Role", value: "Co-founder and designer (brand, web, UX)" },
-      { label: "Scale", value: "Dozens of tech companies in Poland, several tons of snack mixes a month, before the pandemic" },
+      { label: "Role", value: "Co-founder; brand, packaging, web and UX, and communication with clients" },
+      { label: "Scale", value: "40 companies on subscription, mostly software houses and tech companies in Poland; several tons of snack mixes a month" },
+      { label: "Status", value: "Closed in 2020, when the pandemic moved offices to remote work" },
     ],
     cover: img("dosyp/dispensers", "Two Dosyp.pl dispensers with nut mixes on a wooden crate in an office kitchen"),
     gallery: [
@@ -190,8 +191,9 @@ export const projects: Project[] = [
       img("dosyp/sketch", "First sketches for the Dosyp.pl logo: raised hands and hand lettering, 2019"),
     ],
     body: [
-      "Dosyp.pl delivered mixes of nuts and dried fruit to tech offices across Poland on a subscription. I co-founded it and designed its entire visible layer: the brand identity, the labels and packaging, the website and the ordering flow that office managers used to set up and change their deliveries.",
-      "It was my first time designing for a business I also had to run, and it taught me the difference between a beautiful label and a label that survives a warehouse. The company stopped when the offices closed in 2020.",
+      "Dosyp.pl delivered mixes of nuts and dried fruit to offices across Poland on a subscription. It was our own food product, made by us rather than resold, and I designed its entire visible layer: the brand identity, the labels and packaging, the website and the ordering flow that office managers used to set up and change their deliveries.",
+      "I was also responsible for communication with clients. We aimed it at one audience on purpose: tech companies and software houses. Forty of them subscribed and had the mixes delivered to their office kitchens.",
+      "It was my first time designing for a business I also had to run, and it taught me the difference between a beautiful label and a label that survives a warehouse. The model depended on people being in the office: when the pandemic moved our clients to remote work in 2020, the project closed.",
       "The offer was simple: a dispenser for the office kitchen and a monthly delivery of two mixes, FIT (fibre, cranberry, almonds, coconut, pumpkin and sunflower seeds) and CALIFORNIA (peanuts, almonds, cashews, raisins, M&Ms), with a free first month. The brand started from the sketch at the end of the gallery: raised hands for energy, motivation and focus, and the name lettered by hand until it sat right.",
     ],
   },
@@ -233,15 +235,23 @@ export const projects: Project[] = [
     stack: ["Photogrammetry (Agisoft, Colmap, OpenMVS)", "Blender", "Unity + SteamVR", "Python, C#"],
     facts: [
       { label: "Award", value: "Category winner, Content Production, and HTC Vive prize; Creating Reality Hackathon, USC, March 2018" },
-      { label: "Team", value: "reAnimators, five people; I captured the scenes and cleaned the meshes for rigging and Unity" },
+      { label: "Team", value: "reAnimators, five people; I was the visual artist: captured the scenes and cleaned the meshes for rigging and Unity" },
     ],
-    cover: img("one-minute-stories/3", "A photogrammetry portrait from the same capture pipeline"),
+    cover: {
+      src: "https://i.ytimg.com/vi/bb_T62RgTtY/maxresdefault.jpg",
+      alt: "Still from the demo video: a photogrammetry scan of people around a table, standing in a VR room with snowy mountains outside",
+      w: 1280,
+      h: 720,
+    },
+    video: { youtube: "bb_T62RgTtY", title: "Memories, demo video from the Creating Reality Hackathon" },
     gallery: [],
     body: [
       "Memories was an open-source photogrammetry pipeline with a VR experience on top. You filmed a still scene or a person on a phone, uploaded the video to a self-hosted server, and got a 3D model back. Three scenes captured during the hackathon could then be entered in VR, one of them with a rigged, animated character made from a single smartphone video. To move between scenes you leaned into them.",
-      "I captured the scenes and the people and cleaned the meshes in Blender before rigging and import into Unity. The lesson the team took away, and that I still use, is that an early, low-fidelity proof of concept beats a complete toolkit when the clock is running.",
+      "We filmed on our phones, pulled frames from the video and built the models in Agisoft PhotoScan, with a prototype of the open pipeline in COLMAP, OpenMVS and OpenMVG behind it. The models were cleaned in Blender, the characters auto-rigged in Mixamo, and the scenes rendered in Unity for the HTC Vive with SteamVR and VRTK, a toolkit the team learned in a day.",
+      "Not much went smoothly: a failing Vive adapter, people captured in uneven light, meshes too heavy for the headset, Mixamo refusing models that were not clean enough. Regular stand-ups and demos kept five people moving in one direction.",
+      "I was the visual artist on the team: I captured the scenes and the people and cleaned the meshes in Blender before rigging and import into Unity. The lesson the team took away, and that I still use, is that an early, low-fidelity proof of concept beats a complete toolkit when the clock is running.",
     ],
-    links: [{ label: "Project on Devpost", href: "https://devpost.com/software/memories-2u9xkn" }, { label: "About the hackathon", href: "https://realityvirtuallyhack.com/" }],
+    links: [{ label: "Project on Devpost", href: "https://devpost.com/software/memories-2u9xkn" }, { label: "Code", href: "https://github.com/creatingrealitysubmissions/reanimators" }, { label: "About the hackathon", href: "https://realityvirtuallyhack.com/" }],
   },
   {
     slug: "code-for-unexpected-events",
@@ -300,7 +310,7 @@ export const projects: Project[] = [
       { label: "Shown", value: "“Macierzyństwo Maryi”, Concordia Design, Wrocław 2021 · “Sancta Maria, Mater Dei”, Muzeum Drukarstwa, Nowy Targ 2023" },
     ],
     cover: img("marys-way/cover", "Mary’s Way, overall view"),
-    gallery: [img("marys-way/1", "Detail"), img("marys-way/2", "Detail"), img("marys-way/3", "Detail")],
+    gallery: [], // 1–3.webp in public/images/marys-way are Play Well photos; waiting for real documentation
     body: [
       "At first glance a girl’s herbarium: a diary of finds and small treasures in pastel, fragile notes on slightly crumpled sheets of paper arranged like a puzzle. The simple means are deliberate, an assent to ordinariness.",
       "The composition does not tell the viewer where to look; one browses frames from a life (birth, closeness, joys and anxieties) like an intruder. At the centre a yellow wreath of field flowers carries three readings at once: innocence, the apocalyptic crown of twelve stars, and the crown of thorns. The last card, bottom right, shows the bright figure of the Child settling into the shape of the Crucified: the sequence runs from birth to death, her way in his way.",
@@ -326,22 +336,6 @@ export const projects: Project[] = [
       "The glitched surfaces are intended. Memory as an image is sharp; memory as it is lived is blurred, multi-dimensional, uncertain. One woman refused to be still, so her hands are missing from the model.",
     ],
     links: [{ label: "Process notes on Medium", href: "https://medium.com/@roszykmaria/people-in-los-angeles-f47c50099767" }],
-  },
-  {
-    slug: "intimacy-of-materiality",
-    title: "Intimacy of Materiality",
-    kind: "art",
-    year: "2018",
-    sortYear: 2018,
-    tagline: "The unconscious collection left in an apartment after the death of a woman I never met, recomposed into a fragile architecture.",
-    lead: "A tender form of preservation, neither monumental nor archival.",
-    stack: ["Installation", "Textiles, bobbins, threads, clothing, found objects"],
-    facts: [{ label: "Shown", value: "“Inwändig. Auswändig”, intershop interdisciplinaire, Leipzig 2018 · Galeria Szewska, Poznań 2021" }],
-    cover: img("intimacy-of-materiality/cover", "Installation view"),
-    gallery: [img("intimacy-of-materiality/1", "Detail"), img("intimacy-of-materiality/2", "Detail")],
-    body: [
-      "Built from the “unconscious collection” left in an apartment after the death of a woman I never met: worn and unworn garments, slips, underwear, and hundreds of threads and spools. Suspended and recomposed into a fragile architecture of memory, the work proposes a tender form of preservation in which objects carry a life into social space.",
-    ],
   },
   {
     slug: "de-pl-intuitive-dictionary",

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProject, getProjects } from "@/lib/content";
+import { VideoEmbed } from "@/components/video-embed";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -30,7 +31,7 @@ export default async function ProjectPage({ params }: Props) {
   const siblings = all.filter((q) => q.kind === p.kind);
   const i = siblings.findIndex((q) => q.slug === p.slug);
   const next = siblings[(i + 1) % siblings.length];
-  const images = [p.cover, ...p.gallery];
+  const images = p.video ? p.gallery : [p.cover, ...p.gallery];
   const isPhone = (g: { w: number; h: number }) => g.h > g.w * 1.8;
   const phones = images.filter(isPhone).slice(0, 3);
   const others = images.filter((g) => !phones.includes(g));
@@ -57,6 +58,9 @@ export default async function ProjectPage({ params }: Props) {
         </ul>
       </div>
 
+      {p.video ? (
+        <VideoEmbed id={p.video.youtube} title={p.video.title} poster={p.cover} sizes="(max-width: 1100px) 100vw, 1100px" priority className="mb-3.5" />
+      ) : null}
       {phones.length ? (
         <div className="mb-3.5 grid grid-cols-3 gap-3.5">
           {phones.map((g, k) => (

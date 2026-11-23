@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Project } from "@/content/types";
+import { VideoEmbed } from "./video-embed";
 
 /* Large entries: role as the heading, two sentences with numbers, arrow links, one big image. */
 export function WorkEntries({ projects }: { projects: Project[] }) {
@@ -22,16 +23,20 @@ export function WorkEntries({ projects }: { projects: Project[] }) {
               ))}
             </p>
           </div>
-          <Link href={`/work/${p.slug}`} aria-label={p.title}>
-            <Image
-              src={p.cover.src}
-              alt={p.cover.alt}
-              width={p.cover.w}
-              height={p.cover.h}
-              sizes="(max-width: 640px) 100vw, 560px"
-              className={`w-full border border-rule bg-tint ${p.cover.h > p.cover.w * 1.8 ? "max-h-[520px] object-contain object-top bg-tint" : "aspect-[4/3] object-cover"}`}
-            />
-          </Link>
+          {p.video ? (
+            <VideoEmbed id={p.video.youtube} title={p.video.title} poster={p.cover} sizes="(max-width: 640px) 100vw, 560px" className="self-start" />
+          ) : (
+            <Link href={`/work/${p.slug}`} aria-label={p.title}>
+              <Image
+                src={p.cover.src}
+                alt={p.cover.alt}
+                width={p.cover.w}
+                height={p.cover.h}
+                sizes="(max-width: 640px) 100vw, 560px"
+                className={`w-full border border-rule bg-tint ${p.cover.h > p.cover.w * 1.8 ? "max-h-[520px] object-contain object-top bg-tint" : "aspect-[4/3] object-cover"}`}
+              />
+            </Link>
+          )}
         </li>
       ))}
     </ul>

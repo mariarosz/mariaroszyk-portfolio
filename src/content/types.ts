@@ -15,6 +15,7 @@ export type Project = {
   stack: string[]; // product: technologies; art: medium
   facts: { label: string; value: string }[];
   cover: Img;
+  video?: { youtube: string; title: string }; // YouTube id; the cover is the poster frame
   gallery: Img[];
   body: string[]; // paragraphs (used when sections are absent)
   sections?: { heading: string; paragraphs: string[] }[]; // case-study skeleton: Challenge, Role, Insight, Process, Outcome
