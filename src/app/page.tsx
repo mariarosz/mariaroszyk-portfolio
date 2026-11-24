@@ -47,10 +47,10 @@ export default async function Home() {
         <div>
           <p className="eyebrow">About</p>
           <Image
-            src="https://avatars.githubusercontent.com/u/36976939?s=460&v=4"
-            alt="Maria Roszyk laughing, outdoors on a sunny day"
-            width={460}
-            height={460}
+            src="/images/about/maria.webp"
+            alt="Maria Roszyk laughing, in profile, outdoors on a sunny day"
+            width={800}
+            height={800}
             sizes="144px"
             className="mb-5 h-36 w-36 border border-rule bg-tint object-cover"
           />
