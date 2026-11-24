@@ -39,8 +39,8 @@ function blocksToParagraphs(blocks: Block[] | undefined): string[] {
 
 const PROJECT_FIELDS = `
   title, "slug": slug.current, kind, year, sortYear, featured, tagline, role, outcome, lead, stack, facts, links, body, sections, video,
-  cover{..., asset->{_ref, metadata{dimensions}}},
-  gallery[]{..., asset->{_ref, metadata{dimensions}}}
+  cover{..., asset->{"_ref": _id, metadata{dimensions}}},
+  gallery[]{..., asset->{"_ref": _id, metadata{dimensions}}}
 `;
 
 type SanityProject = Omit<Project, "cover" | "gallery" | "body"> & {

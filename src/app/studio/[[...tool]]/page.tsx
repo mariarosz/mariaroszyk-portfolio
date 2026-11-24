@@ -13,5 +13,10 @@ export default function StudioPage() {
       </main>
     );
   }
-  return <NextStudio config={config} />;
+  // The Studio is its own app: cover the site's header, footer and narrow column.
+  return (
+    <div className="fixed inset-0 z-50 bg-white">
+      <NextStudio config={config} />
+    </div>
+  );
 }

@@ -43,41 +43,55 @@ export default async function Home() {
         <ProjectGrid projects={art} />
       </section>
 
-      <section id="about" className="grid gap-7 py-10 sm:grid-cols-2 sm:gap-10">
-        <div>
-          <p className="eyebrow">About</p>
-          <Image
-            src="/images/about/maria.webp"
-            alt="Maria Roszyk laughing, in profile, outdoors on a sunny day"
-            width={800}
-            height={800}
-            sizes="144px"
-            className="mb-5 h-36 w-36 border border-rule bg-tint object-cover"
-          />
-          <h2 className="display mb-4 text-[30px] leading-tight">Art history first, then the tools.</h2>
-          {site.about.map((p, i) => (
-            <p key={i} className="mb-4 max-w-[36em] text-ink-2">{p}</p>
-          ))}
+      <section id="about" className="scroll-mt-6 py-10">
+        <div className="grid gap-8 sm:grid-cols-[1fr_2fr] sm:gap-10">
+          <div>
+            <p className="eyebrow">About</p>
+            <h2 className="display mb-6 text-[30px] leading-tight sm:text-[36px]">Art history first, then the tools.</h2>
+            <ul className="m-0 flex list-none flex-wrap gap-x-6 gap-y-2 p-0 text-[15px] sm:flex-col">
+              <li><a href="/Maria_Roszyk_CV.pdf">CV (PDF)</a></li>
+              <li><a href={`mailto:${site.email}`}>Email</a></li>
+              <li><a href={site.github}>GitHub</a></li>
+              <li><a href={site.linkedin}>LinkedIn</a></li>
+            </ul>
+          </div>
+          <div>
+            <Image
+              src="/images/about/maria.webp"
+              alt="Maria Roszyk laughing, in profile, outdoors on a sunny day"
+              width={800}
+              height={800}
+              sizes="(max-width: 640px) 100vw, 720px"
+              className="mb-8 aspect-[4/3] w-full border border-rule bg-tint object-cover object-[50%_30%]"
+            />
+            {site.about.map((p, i) => (
+              <p key={i} className={`mb-5 max-w-[36em] text-ink ${i === 0 ? "text-[20px] leading-[1.5] sm:text-[22px]" : "text-[18px] leading-[1.6]"}`}>{p}</p>
+            ))}
+          </div>
         </div>
-        <div>
-          <p className="eyebrow">Recognition</p>
-          <ul className="m-0 list-none p-0">
-            {site.recognition.map((r) => (
-              <li key={r.what} className="flex justify-between gap-4 border-b border-rule py-2 text-[15px]">
-                <span>{r.what}</span>
-                <span className="text-ink-2">{r.year}</span>
-              </li>
-            ))}
-          </ul>
-          <p className="eyebrow mt-9">Education</p>
-          <ul className="m-0 list-none p-0">
-            {site.education.map((r) => (
-              <li key={r.what} className="flex justify-between gap-4 border-b border-rule py-2 text-[15px]">
-                <span>{r.what}</span>
-                <span className="text-ink-2">{r.year}</span>
-              </li>
-            ))}
-          </ul>
+        <div className="mt-12 grid gap-7 sm:grid-cols-2 sm:gap-10">
+          <div>
+            <p className="eyebrow">Recognition</p>
+            <ul className="m-0 list-none p-0">
+              {site.recognition.map((r) => (
+                <li key={r.what} className="flex justify-between gap-4 border-b border-rule py-2 text-[15px]">
+                  <span>{r.what}</span>
+                  <span className="text-ink-2">{r.year}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p className="eyebrow">Education</p>
+            <ul className="m-0 list-none p-0">
+              {site.education.map((r) => (
+                <li key={r.what} className="flex justify-between gap-4 border-b border-rule py-2 text-[15px]">
+                  <span>{r.what}</span>
+                  <span className="text-ink-2">{r.year}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 
