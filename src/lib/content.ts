@@ -25,6 +25,11 @@ function toImg(image: SanityImage | undefined, fallbackAlt: string): Img | undef
   };
 }
 
+/* A project with a video and no uploaded cover uses the video's own poster frame. */
+function videoPoster(id: string, alt: string): Img {
+  return { src: `https://i.ytimg.com/vi/${id}/maxresdefault.jpg`, alt, w: 1280, h: 720 };
+}
+
 function blocksToParagraphs(blocks: Block[] | undefined): string[] {
   return (blocks ?? [])
     .filter((b) => b._type === "block")
@@ -50,7 +55,7 @@ function mapProject(p: SanityProject): Project {
     ...p,
     stack: p.stack ?? [],
     facts: p.facts ?? [],
-    cover: toImg(p.cover, p.title) ?? placeholder,
+    cover: toImg(p.cover, p.title) ?? (p.video ? videoPoster(p.video.youtube, p.title) : placeholder),
     gallery: (p.gallery ?? []).map((g) => toImg(g, p.title)).filter((g): g is Img => Boolean(g)),
     body: blocksToParagraphs(p.body),
   };

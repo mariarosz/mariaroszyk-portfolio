@@ -10,6 +10,8 @@ const nextConfig: NextConfig = {
     // Poster frames for embedded videos (Memories) and the About portrait.
     remotePatterns: [
       { protocol: "https", hostname: "i.ytimg.com", pathname: "/vi/**" },
+      // Images uploaded to Sanity.
+      { protocol: "https", hostname: "cdn.sanity.io", pathname: "/images/**" },
       // Portrait in About: the same picture as on GitHub.
       { protocol: "https", hostname: "avatars.githubusercontent.com", pathname: "/u/36976939" },
     ],

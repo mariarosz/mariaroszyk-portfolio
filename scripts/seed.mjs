@@ -26,7 +26,7 @@ const { site, writing } = await import(pathToFileURL(join(process.cwd(), "src/co
 
 const uploaded = new Map();
 async function image(img) {
-  if (!img) return undefined;
+  if (!img || /^https?:/.test(img.src)) return undefined; // remote posters (video) are not uploaded
   if (!uploaded.has(img.src)) {
     const file = join(process.cwd(), "public", img.src);
     const asset = await client.assets.upload("image", readFileSync(file), { filename: basename(file) });
@@ -50,6 +50,8 @@ for (const p of projects) {
     sortYear: p.sortYear,
     featured: Boolean(p.featured),
     tagline: p.tagline,
+    role: p.role,
+    outcome: p.outcome,
     lead: p.lead,
     stack: p.stack,
     facts: p.facts.map((f) => ({ _key: key(), ...f })),
@@ -57,6 +59,8 @@ for (const p of projects) {
     cover: await image(p.cover),
     gallery: await Promise.all(p.gallery.map(async (g) => ({ _key: key(), ...(await image(g)) }))),
     body: blocks(p.body),
+    sections: p.sections?.map((s) => ({ _key: key(), heading: s.heading, paragraphs: s.paragraphs })),
+    video: p.video,
   };
   await client.createOrReplace(doc);
   console.log("project", p.slug);

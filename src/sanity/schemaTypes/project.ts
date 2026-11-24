@@ -22,6 +22,15 @@ export const projectType = defineType({
       of: [{ type: "object", fields: [{ name: "label", type: "string" }, { name: "value", type: "string" }] }],
     }),
     defineField({ name: "cover", type: "image", options: { hotspot: true }, fields: [{ name: "alt", type: "string" }] }),
+    defineField({
+      name: "video",
+      type: "object",
+      description: "Optional YouTube video shown instead of the cover; its poster frame is used when no cover is set",
+      fields: [
+        { name: "youtube", type: "string", title: "YouTube video id" },
+        { name: "title", type: "string" },
+      ],
+    }),
     defineField({ name: "gallery", type: "array", of: [{ type: "image", options: { hotspot: true }, fields: [{ name: "alt", type: "string" }] }] }),
     defineField({ name: "body", type: "array", of: [{ type: "block" }] }),
     defineField({
