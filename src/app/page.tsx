@@ -44,30 +44,28 @@ export default async function Home() {
       </section>
 
       <section id="about" className="scroll-mt-6 py-10">
-        <div className="grid gap-8 sm:grid-cols-[1fr_2fr] sm:gap-10">
+        <div className="grid items-start gap-7 sm:grid-cols-2 sm:gap-10">
           <div>
             <p className="eyebrow">About</p>
-            <h2 className="display mb-6 text-[30px] leading-tight sm:text-[36px]">Art history first, then the tools.</h2>
-            <ul className="m-0 flex list-none flex-wrap gap-x-6 gap-y-2 p-0 text-[15px] sm:flex-col">
-              <li><a href="/Maria_Roszyk_CV.pdf">CV (PDF)</a></li>
-              <li><a href={`mailto:${site.email}`}>Email</a></li>
-              <li><a href={site.github}>GitHub</a></li>
-              <li><a href={site.linkedin}>LinkedIn</a></li>
-            </ul>
-          </div>
-          <div>
-            <Image
-              src="/images/about/maria.webp"
-              alt="Maria Roszyk laughing, in profile, outdoors on a sunny day"
-              width={800}
-              height={800}
-              sizes="(max-width: 640px) 100vw, 720px"
-              className="mb-8 aspect-[4/3] w-full border border-rule bg-tint object-cover object-[50%_30%]"
-            />
+            <h2 className="display mb-5 text-[30px] leading-tight sm:text-[36px]">Art history first, then the tools.</h2>
             {site.about.map((p, i) => (
-              <p key={i} className={`mb-5 max-w-[36em] text-ink ${i === 0 ? "text-[20px] leading-[1.5] sm:text-[22px]" : "text-[18px] leading-[1.6]"}`}>{p}</p>
+              <p key={i} className={`mb-4 max-w-[34em] text-ink ${i === 0 ? "text-[19px] leading-[1.5]" : "text-[17px] leading-[1.6]"}`}>{p}</p>
             ))}
+            <p className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-[15px]">
+              <a href="/Maria_Roszyk_CV.pdf">CV (PDF)</a>
+              <a href={`mailto:${site.email}`}>Email</a>
+              <a href={site.github}>GitHub</a>
+              <a href={site.linkedin}>LinkedIn</a>
+            </p>
           </div>
+          <Image
+            src="/images/about/maria.webp"
+            alt="Maria Roszyk laughing, in profile, outdoors on a sunny day"
+            width={800}
+            height={800}
+            sizes="(max-width: 640px) 100vw, 500px"
+            className="aspect-square w-full border border-rule bg-tint object-cover sm:mt-9"
+          />
         </div>
         <div className="mt-12 grid gap-7 sm:grid-cols-2 sm:gap-10">
           <div>
