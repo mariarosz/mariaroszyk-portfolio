@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Weave } from "@/components/weave";
 import { Headline } from "@/components/headline";
 import { ProjectGrid } from "@/components/project-grid";
@@ -45,6 +46,14 @@ export default async function Home() {
       <section id="about" className="grid gap-7 py-10 sm:grid-cols-2 sm:gap-10">
         <div>
           <p className="eyebrow">About</p>
+          <Image
+            src="https://avatars.githubusercontent.com/u/36976939?s=460&v=4"
+            alt="Maria Roszyk laughing, outdoors on a sunny day"
+            width={460}
+            height={460}
+            sizes="144px"
+            className="mb-5 h-36 w-36 border border-rule bg-tint object-cover"
+          />
           <h2 className="display mb-4 text-[30px] leading-tight">Art history first, then the tools.</h2>
           {site.about.map((p, i) => (
             <p key={i} className="mb-4 max-w-[36em] text-ink-2">{p}</p>

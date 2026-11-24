@@ -7,8 +7,12 @@ const nextConfig: NextConfig = {
   cacheComponents: true,
   partialPrefetching: true,
   images: {
-    // Poster frames for embedded videos (Memories).
-    remotePatterns: [{ protocol: "https", hostname: "i.ytimg.com", pathname: "/vi/**" }],
+    // Poster frames for embedded videos (Memories) and the About portrait.
+    remotePatterns: [
+      { protocol: "https", hostname: "i.ytimg.com", pathname: "/vi/**" },
+      // Portrait in About: the same picture as on GitHub.
+      { protocol: "https", hostname: "avatars.githubusercontent.com", pathname: "/u/36976939" },
+    ],
   },
   turbopack: {
     rules: {
